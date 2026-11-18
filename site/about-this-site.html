@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en" data-scene-paused="true">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About this site — Tim Callaghan</title>
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="about.css">
+<script type="importmap">{ "imports": { "three": "./vendor/three.module.js", "three/addons/": "./vendor/jsm/" } }</script>
+<meta name="description" content="How Tim Callaghan’s personal website was created with an agentic web studio.">
+<link rel="canonical" href="https://aboutme.tclabs.uk/about-this-site">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About this site — Tim Callaghan">
+<meta property="og:description" content="How Tim Callaghan’s personal website was created with an agentic web studio.">
+<meta property="og:url" content="https://aboutme.tclabs.uk/about-this-site">
+</head>
+<body>
+<picture class="scene-still" aria-hidden="true">
+  <source media="(max-aspect-ratio: 9/10)" srcset="assets/scene/opening-portrait.webp">
+  <img src="assets/scene/opening-landscape.webp" alt="" fetchpriority="high">
+</picture>
+<canvas id="scene" aria-hidden="true"></canvas>
+<a class="skip" href="#content">Skip to content</a>
+<main id="content" tabindex="-1" data-page="about" class="about-copy content-shell">
+<div class="content-panel about-panel" data-camera-block>
+<nav class="panel-nav about-nav" aria-label="Pages">
+  <a data-page-link="home" href="index.html"><span class="t">← Home</span></a>
+  <a data-page-link="work" href="my-work.html"><span class="t">My work</span></a>
+  <button id="about-anim" class="anim-toggle" type="button" disabled aria-pressed="false">Pause diagrams</button>
+</nav>
+<article id="about-story" class="story-panel" data-camera-block tabindex="0" aria-labelledby="about-title">
+<header class="about-head">
+  <h1 id="about-title">About this site</h1>
+  <p class="lede">This site was built by a small studio of AI agents I set up on MausBot, with me playing the client. Here’s how it came together, including the bits that went sideways.</p>
+</header>
+
+<section class="chapter" aria-labelledby="c1">
+  <h2 id="c1"><span class="num" aria-hidden="true">01</span>The idea</h2>
+  <p>It started with <a class="inline" href="https://www.andreelias.dev/en"><span class="t">André Elias’s site</span></a>: an immersive Three.js scene behind a simple set of personal links. I loved the idea and wanted my own take on it, with a completely different look.</p>
+  <p>My brief was a rainy neon street at night, with ordinary people getting on with life under flying cars and future tech. Mostly Blade Runner, with a hint of The Fifth Element. If you’re a fan of the synth blues in Vangelis’s Blade Runner score, I’d turn the sound on for this one. I love what Suno did with Neon Rain Blues (Deckard).</p>
+  <p>I also wanted to trial an end-to-end agentic website production process, with me as the client doing none of the work except review, feedback and approvals. I wanted to collaborate with AI to get there, rather than one-shot an output and work backwards, and to follow a real studio process with gates, checks and balances.</p>
+</section>
+
+<section class="chapter" aria-labelledby="c2">
+  <h2 id="c2"><span class="num" aria-hidden="true">02</span>A web studio staffed by spiders</h2>
+  <figure class="fig fig-team" aria-labelledby="f-team">
+    <ul class="team">
+      <li class="member m-tim">
+        <svg class="crit" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="16" r="7"/><path d="M10 42c0-11 7-15 14-15s14 4 14 15"/></svg>
+        <b>Tim</b><span>Client. Makes the calls.</span>
+      </li>
+      <li class="member m-roland">
+        <svg class="crit" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M33 25c4 1 8 4 11 6-3 2-7 4-11 5"/><ellipse cx="22" cy="31" rx="12" ry="8"/><circle cx="32" cy="23" r="4"/><circle class="dot" cx="37" cy="30" r="1.2"/><path d="M10 32c-7 2-8 10-1 10 5 1 7-2 9-1"/><path d="M17 38v4M27 38v4"/></svg>
+        <b>Roland</b><span>Delivery lead. Not a spider.</span>
+      </li>
+      <li class="member m-spider m-parker">
+        <svg class="crit" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path class="silk" d="M24 0v16"/><g class="legs"><path d="M20 22 10 14 4 18"/><path d="M19 25 8 24 3 30"/><path d="M20 28 10 33 7 40"/><path d="M21 31 15 38 14 45"/><path d="M28 22 38 14 44 18"/><path d="M29 25 40 24 45 30"/><path d="M28 28 38 33 41 40"/><path d="M27 31 33 38 34 45"/></g><ellipse cx="24" cy="30" rx="6" ry="7"/><circle cx="24" cy="20" r="4"/></svg>
+        <b>Parker</b><span>Creative direction</span>
+      </li>
+      <li class="member m-spider m-charlotte">
+        <svg class="crit" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path class="silk" d="M24 0v16"/><g class="legs"><path d="M20 22 10 14 4 18"/><path d="M19 25 8 24 3 30"/><path d="M20 28 10 33 7 40"/><path d="M21 31 15 38 14 45"/><path d="M28 22 38 14 44 18"/><path d="M29 25 40 24 45 30"/><path d="M28 28 38 33 41 40"/><path d="M27 31 33 38 34 45"/></g><ellipse cx="24" cy="30" rx="6" ry="7"/><circle cx="24" cy="20" r="4"/></svg>
+        <b>Charlotte</b><span>Engineering</span>
+      </li>
+      <li class="member m-spider m-shelob">
+        <svg class="crit" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path class="silk" d="M24 0v16"/><g class="legs"><path d="M20 22 10 14 4 18"/><path d="M19 25 8 24 3 30"/><path d="M20 28 10 33 7 40"/><path d="M21 31 15 38 14 45"/><path d="M28 22 38 14 44 18"/><path d="M29 25 40 24 45 30"/><path d="M28 28 38 33 41 40"/><path d="M27 31 33 38 34 45"/></g><ellipse cx="24" cy="30" rx="6" ry="7"/><circle cx="24" cy="20" r="4"/></svg>
+        <b>Shelob</b><span>Independent QA. Catches bugs.</span>
+      </li>
+    </ul>
+    <figcaption id="f-team">Who does what. I decide, Roland coordinates, and the three specialists hang off his line.</figcaption>
+  </figure>
+  <p>Parker (as in Peter) handles creative direction. Charlotte (of the web) writes the code. Shelob (Tolkien’s) does independent QA, because she catches bugs. Roland leads delivery. His name was inspired by the 1980s Roland Rat Superstar, which seemed fitting for MausBot. He isn’t a spider, and I did ask him not to eat the spiders.</p>
+  <p>I’m the client: I make the creative calls and approve anything that goes public. Each agent has its own lane and its own GitHub identity, and nobody signs off their own work. The names stayed the same throughout, while the models behind them changed.</p>
+</section>
+
+<section class="chapter" aria-labelledby="c3">
+  <h2 id="c3"><span class="num" aria-hidden="true">03</span>Gates, and going round again</h2>
+  <p>Before anyone wrote site code, Roland wrote the process. Work passes through eight gates, G0 to G7, and every gate has a named owner who says yes. On paper it’s a neat line. In practice it’s a loop.</p>
+  <figure class="fig fig-gates" aria-labelledby="f-gates">
+    <div class="track">
+      <div class="rail" aria-hidden="true"><span class="token"></span></div>
+      <ol class="gates">
+        <li class="by-tim"><span class="node">G0</span><b>Brief</b><span class="who">Tim accepts</span></li>
+        <li class="by-tim loop"><span class="node">G1</span><b>Direction</b><span class="who">Tim chooses</span></li>
+        <li class="by-roland loop"><span class="node">G2</span><b>Working proof</b><span class="who">Roland accepts</span></li>
+        <li class="by-roland"><span class="node">G3</span><b>Ready to build</b><span class="who">Roland</span></li>
+        <li class="by-roland loop"><span class="node">G4</span><b>Build in slices</b><span class="who">Roland, after review</span></li>
+        <li class="by-tim loop"><span class="node">G5</span><b>Release candidate</b><span class="who">Tim says go</span></li>
+        <li class="by-roland"><span class="node">G6</span><b>Live and checked</b><span class="who">Roland verifies</span></li>
+        <li class="by-roland"><span class="node">G7</span><b>Look back</b><span class="who">Roland closes</span></li>
+      </ol>
+    </div>
+    <ul class="loops">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v5h5"/></svg><span><b>G1</b> Flat drawings rejected. Redone against a real 3D reference.</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v5h5"/></svg><span><b>G2</b> A later camera drifted, so we went back to the first build’s framing.</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v5h5"/></svg><span><b>G4–G5</b> My notes on the private preview sent work back more than once.</span></li>
+    </ul>
+    <figcaption id="f-gates"><span class="key k-tim">Tim decides</span> <span class="key k-roland">Roland decides</span> The circled gates are where we went round again.</figcaption>
+  </figure>
+  <p>It began with a client interview. Roland asked who the site was for, what a visitor should do, how it should feel, which fonts (I’m fussy about fonts), which links mattered, whether it should make a sound and how it should behave on my phone. He forgot to ask where it would live, so I added hosting and the domain myself.</p>
+  <figure class="fig fig-interview" aria-labelledby="f-int">
+    <ul class="asks">
+      <li>Who is it for?</li><li>What should visitors do?</li><li>How should it feel?</li><li>Which fonts?</li><li>Which links?</li><li>Sound?</li><li>How does it behave on my phone?</li>
+      <li class="missed">Where will it live? <span>(I added this)</span></li>
+    </ul>
+    <figcaption id="f-int">The interview, roughly. The dashed one wasn’t asked.</figcaption>
+  </figure>
+</section>
+
+<section class="chapter" aria-labelledby="c4">
+  <h2 id="c4"><span class="num" aria-hidden="true">04</span>Getting the city right</h2>
+  <p>The first concept images were flat 2D drawings. Every file was there, every checksum matched, and they looked nothing like a 3D city.</p>
+  <p>After that it was passes and side-by-side comparisons. Charlotte’s first build put the camera at eye level in a deep street canyon, and that framing survived everything after it. Later passes drifted too close, so we went back. Parker added people, stalls, window life, neon and a billboard. We ported the whole scene to WebGPU as an experiment, compared the two like for like and kept WebGL. The final rounds came from me prodding it on my phone.</p>
+  <figure class="fig fig-passes" aria-labelledby="f-passes">
+    <ol class="passes">
+      <li class="dropped">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><rect class="tf" x="10" y="12" width="28" height="48"/><rect class="tf" x="82" y="20" width="28" height="40"/><rect class="tf" x="0" y="60" width="120" height="12"/><circle class="tm" cx="60" cy="22" r="7"/></svg>
+        <b>Flat mock-ups</b><span class="by">2D drawings</span><span class="verdict">Rejected</span>
+      </li>
+      <li class="kept">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><path class="tl" d="M0 0 48 30v12L0 72M120 0 72 30v12l48 30M48 36h24"/><path class="ta" d="M14 16v8M24 22v8M14 46v8M24 44v8M106 16v8M96 22v8"/></svg>
+        <b>Eye-level street</b><span class="by">Charlotte · Claude Opus</span><span class="verdict">Kept: the framing</span>
+      </li>
+      <li class="dropped">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><rect class="tf" x="0" y="0" width="74" height="72"/><rect class="tm" x="16" y="16" width="34" height="10"/><path class="tl" d="M74 0v72M74 46h46"/></svg>
+        <b>Close-up slice</b><span class="by">Charlotte · GPT-6 Astra</span><span class="verdict">Dropped: too close</span>
+      </li>
+      <li class="kept">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><path class="tl" d="M0 0 48 30v12L0 72M120 0 72 30v12l48 30"/><path class="tm" d="M78 46h22l6 8H72z"/><path class="ta" d="M30 54v12M36 56v10M60 44v8"/></svg>
+        <b>Refinement</b><span class="by">Parker · Claude Fable 5.2</span><span class="verdict">Kept: stalls, human scale</span>
+      </li>
+      <li class="kept">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><g class="ta"><circle cx="34" cy="22" r="6"/><path d="M24 62c0-18 4-28 10-28s10 10 10 28"/><circle cx="60" cy="18" r="6"/><path d="M50 62c0-20 4-32 10-32s10 12 10 32"/><circle cx="86" cy="24" r="6"/><path d="M76 62c0-16 4-26 10-26s10 10 10 26"/></g></svg>
+        <b>People</b><span class="by">Parker · Claude Opus 5.5</span><span class="verdict">Kept: three adapted characters</span>
+      </li>
+      <li class="kept">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><g class="tf"><rect x="10" y="8" width="14" height="12"/><rect x="32" y="8" width="14" height="12"/><rect x="54" y="8" width="14" height="12"/><rect x="10" y="28" width="14" height="12"/><rect x="54" y="28" width="14" height="12"/><rect x="32" y="48" width="14" height="12"/><rect x="54" y="48" width="14" height="12"/></g><g class="ta-fill"><rect x="32" y="28" width="14" height="12"/><rect x="10" y="48" width="14" height="12"/></g><path class="tm" d="M86 16h22M86 30h16"/></svg>
+        <b>Window life</b><span class="by">Parker · GPT-6 Astra</span><span class="verdict">Kept: lights, two flickering signs</span>
+      </li>
+      <li class="kept">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><rect class="tl" x="22" y="8" width="76" height="46"/><circle class="tm" cx="60" cy="26" r="7"/><path class="tm" d="M46 54c0-10 6-14 14-14s14 4 14 14"/><path class="tl" d="M40 54v12M80 54v12"/></svg>
+        <b>Billboard</b><span class="by">Parker · GPT-6.1 Sol</span><span class="verdict">Kept: newsreader, then adverts</span>
+      </li>
+      <li class="compared">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><rect class="tl" x="8" y="14" width="46" height="34"/><rect class="tf-line" x="66" y="14" width="46" height="34"/><path class="ta" d="M20 32l6 6 14-14"/><path class="tl" d="M24 60h14M82 60h14"/></svg>
+        <b>WebGPU port</b><span class="by">Charlotte · GPT-6.1 Sol</span><span class="verdict">Compared: kept WebGL</span>
+      </li>
+      <li class="kept">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><path class="tm" d="M6 10q12-6 24 0t24 0 24 0 24 0 12 0"/><path class="tl" d="M6 19q12-4 24 0t24 0 24 0 24 0 12 0"/><path class="ta" d="M6 28q8-6 16 0t16 0 16 0 16 0 16 0 16 0 12 0"/><path class="tl" d="M6 37h108"/><path class="tm" d="M6 46q12-3 24 0t24 0 24 0 24 0 12 0"/><path class="ta" d="M6 55q6-5 12 0t12 0 12 0 12 0 12 0 12 0 12 0 12 0 12 0"/><path class="tl" d="M6 64q20-4 40 0t40 0 28 0"/></svg>
+        <b>Sound</b><span class="by">ElevenLabs foley · Suno music</span><span class="verdict">Kept: seven layers</span>
+      </li>
+      <li class="kept">
+        <svg viewBox="0 0 120 72" aria-hidden="true" focusable="false"><rect class="tl" x="44" y="4" width="32" height="64" rx="6"/><path class="tf-line" d="M50 14h16M50 18h10"/><path class="ta" d="M50 58h8M62 58h8"/><circle class="tm" cx="70" cy="12" r="2.5"/></svg>
+        <b>Feedback rounds</b><span class="by">Charlotte, from my notes</span><span class="verdict">Kept: simpler text, icons, touch, rain, sync</span>
+      </li>
+    </ol>
+    <figcaption id="f-passes">The main passes, in order. The feedback rounds tidied the name and links, swapped in Lucide icons picked on Claude Opus 5.5, improved the touch look-around, lit the rain and synced the flying car’s sound to the picture.</figcaption>
+  </figure>
+  <figure class="fig fig-models" aria-labelledby="f-models">
+    <table class="models">
+      <thead><tr><th scope="col">Agent</th><th scope="col">Harness</th><th scope="col">Models it ran on</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Roland</th><td><div class="model-chips"><span class="chip">MausBot</span></div></td><td><div class="model-chips"><span class="chip">GPT-5.6 Sol</span><span class="chip">GPT-6 Astra</span><span class="chip">Claude Sonnet 5.5</span><span class="chip">Claude Fable 5.2</span><span class="chip">Claude Opus 5.5</span></div></td></tr>
+        <tr><th scope="row">Parker</th><td><div class="model-chips"><span class="chip">MausBot</span></div></td><td><div class="model-chips"><span class="chip">GPT-6 Astra</span><span class="chip">Claude Fable 5.2</span><span class="chip">Claude Opus 5.5</span><span class="chip">GPT-6.1 Sol</span></div></td></tr>
+        <tr><th scope="row">Charlotte</th><td><div class="model-chips"><span class="chip">MausBot</span></div></td><td><div class="model-chips"><span class="chip">Claude Opus</span><span class="chip">GPT-6 Astra</span><span class="chip">GPT-6.1 Sol</span></div></td></tr>
+        <tr><th scope="row">Shelob</th><td><div class="model-chips"><span class="chip">MausBot</span></div></td><td><div class="model-chips"><span class="chip">GPT-6 Astra</span></div></td></tr>
+        <tr class="media-row"><th scope="row">Media</th><td><span aria-hidden="true">—</span><span class="sr-only">Not applicable: media generation tools, not agents</span></td><td><div class="model-chips"><span class="chip">OpenAI gpt-image-2</span><span class="chip">Suno (music)</span><span class="chip">ElevenLabs sound effects v3</span></div></td></tr>
+      </tbody>
+    </table>
+    <figcaption id="f-models">Same names, different models, taken from the studio’s records (short runs may be missing). Different models suited different jobs on different days, and I wouldn’t turn that into a league table.</figcaption>
+  </figure>
+</section>
+
+<section class="chapter" aria-labelledby="c5">
+  <h2 id="c5"><span class="num" aria-hidden="true">05</span>What’s made, what’s generated</h2>
+  <figure class="fig fig-media" aria-labelledby="f-media">
+    <svg class="stack" viewBox="0 0 260 300" aria-hidden="true" focusable="false">
+      <g class="layer lic" data-i="1"><path d="M130 0 230 40 130 80 30 40z"/><text x="46" y="45">1</text></g>
+      <g class="layer gen" data-i="2"><path d="M130 0 230 40 130 80 30 40z"/><text x="46" y="45">2</text></g>
+      <g class="layer gen" data-i="3"><path d="M130 0 230 40 130 80 30 40z"/><text x="46" y="45">3</text></g>
+      <g class="layer code" data-i="4"><path d="M130 0 230 40 130 80 30 40z"/><text x="46" y="45">4</text></g>
+      <g class="layer lic" data-i="5"><path d="M130 0 230 40 130 80 30 40z"/><text x="46" y="45">5</text></g>
+      <g class="layer code" data-i="6"><path d="M130 0 230 40 130 80 30 40z"/><text x="46" y="45">6</text></g>
+      <g class="layer lic" data-i="7"><path d="M130 0 230 40 130 80 30 40z"/><text x="46" y="45">7</text></g>
+    </svg>
+    <ol class="layers">
+      <li class="lic"><b>Type and icons</b> Barlow Condensed and Space Grotesk, Lucide icons</li>
+      <li class="gen"><b>Sound</b> Music I made with Suno and street foley from ElevenLabs. Seven layers, off until you switch it on</li>
+      <li class="gen"><b>Billboard newsreader</b> A fictional presenter: one gpt-image-2 still, animated with image warps</li>
+      <li class="code"><b>Adverts</b> Original canvas animations</li>
+      <li class="lic"><b>Three nearest people</b> Adapted from Microsoft Rocketbox (MIT)</li>
+      <li class="code"><b>City and weather</b> Buildings, signs, textures, rain and steam, generated as the page loads</li>
+      <li class="lic"><b>3D engine</b> three.js (MIT)</li>
+    </ol>
+    <figcaption id="f-media"><span class="key k-code">Written in code</span> <span class="key k-gen">Generated</span> <span class="key k-lic">Open source or licensed</span> The scene, pulled apart into layers.</figcaption>
+  </figure>
+  <p>Most of the city is code. Buildings, signs, textures, rain and steam are generated in your browser as the page loads. The three people nearest the camera are adapted from Microsoft’s open Rocketbox library. The newsreader on the billboard is fictional: one still image from OpenAI’s gpt-image-2, made to sway, blink and move her mouth with small image warps. There’s no video or lip-sync behind it. The adverts are original animations. I made “Neon Rain Blues (Deckard)” with Suno. It plays alongside six layers of street sound from ElevenLabs. Nothing plays until you turn sound on.</p>
+</section>
+
+<section class="chapter" aria-labelledby="c6">
+  <h2 id="c6"><span class="num" aria-hidden="true">06</span>From branch to street</h2>
+  <figure class="fig fig-pipe" aria-labelledby="f-pipe">
+    <div class="track">
+      <div class="rail" aria-hidden="true"><span class="token"></span></div>
+      <ol class="pipe">
+        <li><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 7v10M18 10c0 4-6 4-11 7"/></svg></span><b>Branch</b><span class="who">One writer each</span></li>
+        <li><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M6 8v8M18 16V9a3 3 0 0 0-3-3h-4"/><path d="m13 4-2 2 2 2"/></svg></span><b>Pull request</b><span class="who">Exact version</span></li>
+        <li class="review"><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M8.5 11l2 2 3.5-4"/></svg></span><b>Independent review</b><span class="who">Someone else checks</span></li>
+        <li><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="9" rx="1"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><b>Protected main</b><span class="who">Only via review</span></li>
+        <li><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16v12H4z"/><path d="M8 11l3 2-3 2M13 15h3"/></svg></span><b>GitHub Actions</b><span class="who">Same files every build</span></li>
+        <li><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 0 0 .5-8 6 6 0 0 0-11.5 1.5A3.3 3.3 0 0 0 7 18z"/></svg></span><b>Cloudflare Workers</b><span class="who">Free plan, static files</span></li>
+        <li class="live"><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/></svg></span><b>aboutme.tclabs.uk</b><span class="who">You are here</span></li>
+      </ol>
+    </div>
+    <p class="preview-loop"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v5h5"/></svg><span>Before launch, builds went to a private preview only I could open, and my notes went back to the start.</span></p>
+    <figcaption id="f-pipe">How a change reaches you. Each agent commits under its own GitHub identity.</figcaption>
+  </figure>
+  <p>Every change goes on its own branch and through a pull request, and an agent who didn’t write it reviews that exact version before it reaches the protected main branch. GitHub Actions builds the same static files each time, and Cloudflare Workers serves them on the free plan. The site is just static files, with no analytics script on the page.</p>
+  <p>While we iterated, builds went to a private preview that only I could open. Now it’s public, right here.</p>
+</section>
+
+<section class="chapter" aria-labelledby="c7">
+  <h2 id="c7"><span class="num" aria-hidden="true">07</span>What I learned</h2>
+  <div class="lessons">
+    <section class="card worked" aria-labelledby="l1">
+      <h3 id="l1">What worked</h3>
+      <ul>
+        <li>A clear owner for every decision.</li>
+        <li>Independent review before anything counted as done.</li>
+        <li>A concrete reference to aim at, and frozen versions to compare.</li>
+        <li>Specialists iterating while I made the creative calls.</li>
+      </ul>
+    </section>
+    <section class="card change" aria-labelledby="l2">
+      <h3 id="l2">What caught us out</h3>
+      <ul>
+        <li>Correct files and passing tests didn’t mean it looked right.</li>
+        <li>Mocks passed. The real provider’s API didn’t, the first time.</li>
+        <li>A browser pretending to be a phone isn’t a phone, and a mix nobody has listened to isn’t finished.</li>
+        <li>My own feedback caught motion, layout and sound problems the checks missed.</li>
+        <li>Being asked to sign in to services that were already connected.</li>
+      </ul>
+    </section>
+  </div>
+  <p>Next time I want real-device and listening tests earlier, hosting prepared at the start, a rights register from day one and smaller slices, and to reuse the icons and deployment path from this build.</p>
+  <p class="signoff">The city’s still running behind this panel. Head back and have a look around.</p>
+  <nav class="about-nav end" aria-label="Pages, end of article">
+    <a data-page-link="home" href="index.html"><span class="t">← Back to the street</span></a>
+    <a data-page-link="work" href="my-work.html"><span class="t">My work</span></a>
+  </nav>
+</section>
+
+<footer class="credits" aria-labelledby="cr">
+  <h2 id="cr">Credits</h2>
+  <dl>
+    <dt>Inspiration</dt><dd><a class="inline" href="https://www.andreelias.dev/en"><span class="t">André Elias</span></a></dd>
+    <dt>3D engine</dt><dd>three.js (MIT)</dd>
+    <dt>Characters</dt><dd>Adapted from Microsoft Rocketbox (MIT)</dd>
+    <dt>Type</dt><dd>Barlow Condensed and Space Grotesk (SIL Open Font Licence)</dd>
+    <dt>Icons</dt><dd>Lucide (ISC)</dd>
+    <dt>Billboard image</dt><dd>Generated with OpenAI gpt-image-2</dd>
+    <dt>Music</dt><dd>“Neon Rain Blues (Deckard)”, made with Suno</dd>
+    <dt>Street foley and sound effects</dt><dd>Generated with ElevenLabs</dd>
+    <dt>Full notices</dt><dd><a class="inline" href="LICENSES.md"><span class="t">Licences</span></a></dd>
+  </dl>
+  <p class="byline">The words and diagrams on this page were drafted by Claude Opus 5.5 from the studio’s records, in my voice, and checked by the studio.</p>
+</footer>
+<noscript><p>Scene animation needs JavaScript. Navigation and page content remain available.</p></noscript>
+</article>
+</div>
+</main>
+
+<div class="scene-toolbar" aria-label="Scene controls">
+<button id="sound-mute" class="icon-button" type="button" disabled aria-label="Enable sound" aria-pressed="false" data-audible="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g class="sound-waves"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></g><g class="sound-slash"><path d="M16 9a5 5 0 0 1 .95 2.293"/><path d="M19.364 5.636a9 9 0 0 1 1.889 9.96"/><path d="m2 2 20 20"/><path d="m7 7-.587.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298V11"/><path d="M9.828 4.172A.686.686 0 0 1 11 4.657v.686"/></g></svg></button>
+<button id="settings-toggle" class="icon-button" type="button" disabled aria-label="Open settings" aria-controls="sound-controls" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg></button>
+<p id="sound-announcement" class="sr-only" role="status">Sound off.</p>
+</div>
+<section id="sound-controls" class="settings-panel controls" role="dialog" aria-labelledby="settings-title" hidden>
+<h2 id="settings-title">Settings</h2>
+<h3>Sound</h3>
+<div class="settings-actions"><button id="sound-enable" type="button">Enable sound</button><button id="sound-stop" type="button" disabled>Stop sound</button></div>
+<div class="sound-level"><label for="sound-master">Master volume</label><input id="sound-master" data-bus="master" type="range" min="0" max="100" value="100"><output for="sound-master">100%</output></div>
+<div class="sound-level"><label for="sound-music">Music</label><input id="sound-music" data-bus="music" type="range" min="0" max="100" value="100"><output for="sound-music">100%</output></div>
+<div class="sound-level"><label for="sound-ambience">Ambience</label><input id="sound-ambience" data-bus="ambience" type="range" min="0" max="100" value="100"><output for="sound-ambience">100%</output></div>
+<div class="sound-level"><label for="sound-rain">Rain</label><input id="sound-rain" data-bus="rain" type="range" min="0" max="100" value="100"><output for="sound-rain">100%</output></div>
+<p id="sound-status">Sound off. Enable sound on this page to listen.</p>
+<a id="sound-secure-link" hidden>Open the HTTPS page</a>
+<h3>Scene</h3><div class="settings-actions"><button id="motion" type="button" disabled>Pause motion</button><button id="reset-view" type="button" disabled>Centre view</button></div>
+<form><label for="quality">Scene quality</label><select id="quality" name="preset"><option value="auto">Automatic</option><option value="low">Low</option><option value="high">High</option></select><button type="submit">Apply quality</button></form>
+<p id="scene-status" role="status">Loading scene. All page content is available.</p>
+<p class="scene-help">Drag horizontally on the scene to look around. Vertical swipes scroll the page.</p>
+<button id="settings-close" type="button">Close settings</button>
+</section>
+<script type="module" src="src/shell.js"></script>
+</body>
+</html>

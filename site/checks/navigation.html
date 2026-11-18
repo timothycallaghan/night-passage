@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Night Passage navigation checks</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 1rem; background: #101923; color: #ecf4f6; font: 1rem/1.4 system-ui, sans-serif; }
+  a { color: #a1dfef; }
+  h1 { font-size: 1.4rem; }
+  button { font: inherit; padding: .35rem .6rem; }
+  iframe { width: 100%; height: max(550px, 80vh); border: 0; display: block; }
+  pre { overflow: auto; }
+</style>
+<script type="module" src="navigation-check.js"></script>
+</head>
+<body>
+<h1>Night Passage navigation checks</h1>
+<p>Run one check per load. The continuity check enables the shipped music and street sound.</p>
+<p><button id="continuity" disabled>Run scene and sound check</button>
+<button id="chapters" disabled>Run chapter history check</button>
+<a href="navigation.html">Reset checks</a></p>
+<p id="status" role="status">Loading the street…</p>
+<iframe id="street" title="Night Passage test scene"></iframe>
+<details>
+  <summary>Check results</summary>
+  <pre id="results"></pre>
+</details>
+</body>
+</html>
